@@ -10,3 +10,4 @@ app.get('/', (req: any, res: { send: (arg0: string) => void; }) => {
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
+
