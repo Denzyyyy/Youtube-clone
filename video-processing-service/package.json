@@ -4,7 +4,7 @@
   "description": "a skeleton clone of how youtube works on backend with video processing and loadout handling",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node src/index.ts",
+    "start": " ts-node src/index.ts",
     "build": "tsc",
     "serve": "node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -23,6 +23,7 @@
     "@types/express": "^5.0.0",
     "@types/fluent-ffmpeg": "^2.1.27",
     "@types/node": "^22.10.1",
+    "nodemon": "^3.1.9",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.2"
   },
