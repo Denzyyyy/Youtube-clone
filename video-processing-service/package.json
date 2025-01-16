@@ -4,6 +4,7 @@
   "description": "a skeleton clone of how youtube works on backend with video processing and loadout handling",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon --watch src --exec ts-node src/index.ts",
     "start": " ts-node src/index.ts",
     "build": "tsc",
     "serve": "node dist/index.js",
