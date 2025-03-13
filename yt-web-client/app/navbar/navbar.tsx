@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+
 import styles from "./navbar.module.css"
 import SignIn from "./sign-in";
 import { onAuthStateChangedHelper } from "../firebase/firebase";
