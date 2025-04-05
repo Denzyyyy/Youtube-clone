@@ -1,24 +1,23 @@
-import * as functions from "firebase-functions";
-import {initializeApp} from "firebase-admin/app";
-import { Firestore } from "firebase-admin/firestore";
+import {Firestore} from "firebase-admin/firestore";
 import * as logger from "firebase-functions/logger";
-import { auth } from "firebase-functions/v1";
+import {auth} from "firebase-functions/v1";
 import * as admin from "firebase-admin";
 
-admin.initializeApp()
+admin.initializeApp();
 
 const firestore = new Firestore();
 
 
 export const createUser = auth.user().onCreate(async (user) => {
-    const userInfo = {
-      uid: user.uid,
-      email: user.email,
-      photoUrl: user.photoURL || null,
-      createdAt: admin.firestore.FieldValue.serverTimestamp(),
-    };
+  const userInfo = {
+    uid: user.uid,
+    email: user.email,
+    photoUrl: user.photoURL || null,
+    createdAt: admin.firestore.FieldValue.serverTimestamp(),
+  };
 
-    firestore.collection("users").doc(user.uid).set(userInfo);
+  firestore.collection("users").doc(user.uid).set(userInfo);
   logger.info(`User Created: ${JSON.stringify(userInfo)}`);
   return;
 });
+
