@@ -3,6 +3,7 @@ import * as logger from "firebase-functions/logger";
 import {auth} from "firebase-functions/v1";
 import * as admin from "firebase-admin";
 
+
 admin.initializeApp();
 
 const firestore = new Firestore();
