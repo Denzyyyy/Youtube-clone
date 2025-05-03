@@ -13,7 +13,7 @@ admin.initializeApp();
 
 const firestore = new Firestore();
 
-
+//createUser Function
 export const createUser = auth.user().onCreate(async (user) => {
   const userInfo = {
     uid: user.uid,
@@ -27,6 +27,8 @@ export const createUser = auth.user().onCreate(async (user) => {
   return;
 
 });
+
+// generateUploadUrl Function
 
 export const generateUploadUrl = onCall({maxInstances: 1}, async (request) => {
   // Check if the user is authentication (Updated for firebase v2)
